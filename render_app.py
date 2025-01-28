@@ -54,7 +54,7 @@ import sys
 from threading import Thread
 
 # Import model_utils (works directly as it's in the same directory)
-from model_utils import load_all_models, preprocess_input
+from app.model_utils import load_all_models, preprocess_input
 
 # Get port from environment variable
 PORT = int(os.environ.get("PORT", 10000))

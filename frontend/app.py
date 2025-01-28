@@ -1,3 +1,50 @@
+# import pandas as pd
+# import plotly.express as px
+# import plotly.graph_objects as go
+# import requests
+# import streamlit as st
+
+# # Configure page
+# st.set_page_config(
+#     page_title="AdaptNet™ Climate Adaptation Recommendation System",
+#     layout="wide",
+#     initial_sidebar_state="expanded"
+# )
+
+# # Custom CSS for styling
+# st.markdown("""
+# <style>
+#     .main {
+#         background-color: #1E1E1E;
+#         color: #FFFFFF;
+#     }
+#     .stSlider {
+#         background-color: #2D2D2D;
+#     }
+#     .stTextInput {
+#         background-color: #2D2D2D;
+#     }
+#     .section-header {
+#         color: #4FD1C5;
+#         font-size: 1.2em;
+#         font-weight: bold;
+#         margin-bottom: 1em;
+#     }
+#     .subsection {
+#         background-color: #2D2D2D;
+#         padding: 1em;
+#         border-radius: 5px;
+#         margin-bottom: 1em;
+#     }
+# </style>
+# """, unsafe_allow_html=True)
+
+# # API endpoint
+# API_URL = "http://127.0.0.1:8000/predict"
+
+# # Title and description
+# st.title("AdaptNet™ Climate Adaptation Recommendation System")
+# st.markdown("Welcome to AdaptNet™, your comprehensive climate adaptation planning assistant. Get detailed recommendations for adaptation measures based on your local conditions.")
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -40,7 +87,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API endpoint
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://adaptnet-final-j2oc.onrender.com/predict"  # Updated API URL
 
 # Title and description
 st.title("AdaptNet™ Climate Adaptation Recommendation System")
@@ -280,3 +327,7 @@ with tabs[0]:
                 st.error(f"Error: {response.json()['detail']}")
         except Exception as e:
             st.error(f"An error occurred: {str(e)}")
+
+
+
+
